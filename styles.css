@@ -134,7 +134,7 @@ body {
 }
 
 .nav-cta {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--earth-brown), var(--earth-light));
     color: var(--white) !important;
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: 9999px;
@@ -243,7 +243,7 @@ body {
 /* Buttons */
 .btn-primary {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--earth-brown), var(--earth-light));
     color: var(--white);
     padding: var(--spacing-md) var(--spacing-2xl);
     border-radius: 9999px;
@@ -273,13 +273,13 @@ body {
 }
 
 .btn-secondary:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--earth-brown);
+    color: var(--earth-brown);
 }
 
 .btn-primary-large {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--earth-brown), var(--earth-light));
     color: var(--white);
     padding: var(--spacing-lg) var(--spacing-3xl);
     border-radius: 9999px;
@@ -292,7 +292,7 @@ body {
 
 .btn-primary-large:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px -5px rgba(139, 115, 85, 0.3);
 }
 
 /* Sections */
@@ -377,7 +377,7 @@ body {
 .feature-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--earth-brown), var(--earth-light));
     border-radius: 12px;
     display: flex;
     align-items: center;
