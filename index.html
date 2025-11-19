@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone Circle - Time zone awareness for distributed teams</title>
-    <meta name="description" content="A calm, offline-first tool for distributed conservation teams. See working hours across time zones, find meeting times, and respect everyone's boundaries.">
+    <meta name="description" content="An offline-first tool for distributed conservation teams. See working hours across time zones, find meeting times, and respect everyone's boundaries.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
@@ -12,13 +12,13 @@
 
     <!-- Social Meta Tags -->
     <meta property="og:title" content="Stone Circle - Time zone awareness for distributed teams">
-    <meta property="og:description" content="A calm, offline-first tool for distributed conservation teams working across continents.">
+    <meta property="og:description" content="An offline-first tool for distributed conservation teams working across continents.">
     <meta property="og:image" content="https://stonecircle.space/logo.png">
     <meta property="og:url" content="https://stonecircle.space">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Stone Circle - Time zone awareness for distributed teams">
-    <meta name="twitter:description" content="A calm, offline-first tool for distributed conservation teams working across continents.">
+    <meta name="twitter:description" content="An offline-first tool for distributed conservation teams working across continents.">
     <meta name="twitter:image" content="https://stonecircle.space/logo.png">
 
     <!-- Fonts -->
@@ -46,25 +46,111 @@
                 <a href="#philosophy">Philosophy</a>
                 <a href="#privacy">Privacy</a>
                 <a href="#contact">Contact</a>
-                <a href="https://app.stonecircle.space" class="nav-cta">Open App</a>
+                <a href="support.html">Support Conservation</a>
+                <a href="https://app.stonecircle.space" class="nav-cta btn-with-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Install App
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Ken Burns & Particles -->
     <section class="hero">
+        <div class="hero-background">
+            <div class="hero-image"></div>
+            <canvas id="particle-canvas"></canvas>
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line">Time zone awareness</span>
-                    <span class="title-line">for distributed teams</span>
+                    <span class="title-line">Thoughtful coordination</span>
+                    <span class="title-line">across distance</span>
                 </h1>
-                <p class="hero-subtitle">A calm, offline-first tool for conservation teams working across continents. See working hours, find meeting times, and respect everyone's boundaries.</p>
+                <p class="hero-subtitle">An offline-first tool for conservation teams working across continents. See working hours, find meeting times, and respect everyone's boundaries.</p>
+
+                <!-- Live Timezone Simulation -->
+                <div class="timezone-simulation">
+                    <div class="simulation-header">
+                        <span class="simulation-label">Live team view</span>
+                        <span class="simulation-time" id="your-time"></span>
+                    </div>
+                    <div class="simulation-members" id="simulation-members">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
                 <div class="hero-cta">
-                    <a href="https://app.stonecircle.space" class="btn-primary">Open Stone Circle</a>
+                    <a href="https://app.stonecircle.space" class="btn-primary btn-with-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Install App
+                    </a>
                     <a href="#features" class="btn-secondary">Learn More</a>
                 </div>
                 <p class="hero-tagline">Your team. Your time. Your space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works">
+        <div class="container">
+            <h2 class="section-title">How it works</h2>
+            <p class="section-intro">Get your team coordinated in three simple steps</p>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <line x1="20" y1="8" x2="20" y2="14"></line>
+                            <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                    </div>
+                    <h3>Add your team</h3>
+                    <p>Enter each team member's name, timezone, and working hours. Add notes about communication preferences.</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>See availability</h3>
+                    <p>Instantly view who's available now, who's sleeping, and who's almost done for the day.</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>Find meeting times</h3>
+                    <p>Select participants and see overlapping hours. Schedule meetings that respect everyone's boundaries.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -74,7 +160,7 @@
         <div class="container-narrow">
             <p class="problem-text">Your field coordinator is in Costa Rica. Your research director is in New York. Your data analyst is in India. Your policy advisor is in Paris. How do you coordinate without overwhelming each other?</p>
             <p class="problem-text">Most tools either oversimplify—just showing current times—or overcomplicate with enterprise calendar systems that require everyone to maintain synchronized schedules.</p>
-            <p class="problem-solution"><strong>Stone Circle is different.</strong> It provides calm, persistent awareness of your team's time zones and availability. Built for the way distributed teams actually work: asynchronous by default, with occasional synchronous coordination when needed.</p>
+            <p class="problem-solution"><strong>Stone Circle is different.</strong> It provides persistent awareness of your team's time zones and availability. Built for the way distributed teams actually work: asynchronous by default, with occasional synchronous coordination when needed.</p>
         </div>
     </section>
 
@@ -157,12 +243,144 @@
         </div>
     </section>
 
+    <!-- Meeting Time Preview Section -->
+    <section class="section meeting-preview">
+        <div class="container">
+            <h2 class="section-title">Find the perfect meeting time</h2>
+            <p class="section-intro">See overlapping working hours across all time zones at a glance. The green zone shows when everyone is available.</p>
+
+            <div class="meeting-demo">
+                <div class="meeting-demo-header">
+                    <span class="demo-label">Meeting Planner</span>
+                    <span class="demo-time" id="demo-current-time"></span>
+                </div>
+                <div class="meeting-timeline" id="meeting-timeline">
+                    <!-- Populated by JavaScript -->
+                </div>
+                <div class="meeting-demo-footer">
+                    <div class="overlap-indicator">
+                        <span class="overlap-dot"></span>
+                        <span>Best meeting window: <strong id="overlap-time"></strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison">
+        <div class="container">
+            <h2 class="section-title">Why Stone Circle?</h2>
+            <p class="section-intro">Built different from traditional tools</p>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-feature">Feature</div>
+                    <div class="comparison-stone">Stone Circle</div>
+                    <div class="comparison-others">Traditional Tools</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Privacy</div>
+                    <div class="comparison-stone">
+                        <span class="check">✓</span>
+                        <span>100% local, no data leaves device</span>
+                    </div>
+                    <div class="comparison-others">
+                        <span class="cross">✗</span>
+                        <span>Cloud-based, data on servers</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Accounts</div>
+                    <div class="comparison-stone">
+                        <span class="check">✓</span>
+                        <span>No signup required</span>
+                    </div>
+                    <div class="comparison-others">
+                        <span class="cross">✗</span>
+                        <span>Email & password needed</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Offline</div>
+                    <div class="comparison-stone">
+                        <span class="check">✓</span>
+                        <span>Works without internet</span>
+                    </div>
+                    <div class="comparison-others">
+                        <span class="cross">✗</span>
+                        <span>Requires connection</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Cost</div>
+                    <div class="comparison-stone">
+                        <span class="check">✓</span>
+                        <span>Free forever</span>
+                    </div>
+                    <div class="comparison-others">
+                        <span class="cross">✗</span>
+                        <span>Subscription fees</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Complexity</div>
+                    <div class="comparison-stone">
+                        <span class="check">✓</span>
+                        <span>Simple, focused</span>
+                    </div>
+                    <div class="comparison-others">
+                        <span class="cross">✗</span>
+                        <span>Feature bloat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section by-the-numbers">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-item">
+                    <span class="number-value" data-target="0">0</span>
+                    <span class="number-label">Data collected</span>
+                </div>
+                <div class="number-item">
+                    <span class="number-value" data-target="100" data-suffix="%">0</span>
+                    <span class="number-label">Offline capable</span>
+                </div>
+                <div class="number-item">
+                    <span class="number-value" data-text="Every">Every</span>
+                    <span class="number-label">Time zone</span>
+                </div>
+                <div class="number-item">
+                    <span class="number-value" data-text="Unlimited">Unlimited</span>
+                    <span class="number-label">Team members</span>
+                </div>
+                <div class="number-item">
+                    <span class="number-value" data-target="0" data-prefix="$">0</span>
+                    <span class="number-label">Monthly fees</span>
+                </div>
+                <div class="number-item">
+                    <span class="number-value" data-target="3">0</span>
+                    <span class="number-label">Steps to start</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Philosophy Section -->
     <section id="philosophy" class="section philosophy">
         <div class="container-narrow">
             <h2 class="section-title">Why "Stone Circle"?</h2>
             <p class="philosophy-text">Stone circles are ancient gathering places. They mark time and space, creating a shared reference point for communities separated by distance. They're patient, grounded, and permanent.</p>
-            <p class="philosophy-text">That's the kind of coordination tool we believe in. Not demanding instant responses or synchronized schedules. Just providing calm, persistent awareness of when your teammates are available.</p>
+            <p class="philosophy-text">That's the kind of coordination tool we believe in. Not demanding instant responses or synchronized schedules. Just providing persistent awareness of when your teammates are available.</p>
             <p class="philosophy-text">Stone Circle helps distributed teams stay connected without staying online. Know when to reach out. Find times that work. Respect everyone's boundaries.</p>
             <div class="philosophy-quote">
                 "Grounded coordination. Respectful boundaries. Your rhythm."
@@ -246,7 +464,14 @@
             <h2 class="section-title">Start coordinating today</h2>
             <p class="get-started-intro">Stone Circle is a Progressive Web App. That means it works on any device, installs like a native app, and works completely offline.</p>
             <div class="get-started-cta">
-                <a href="https://app.stonecircle.space" class="btn-primary-large" target="_blank" rel="noopener noreferrer">Open Stone Circle</a>
+                <a href="https://app.stonecircle.space" class="btn-primary-large btn-with-icon" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Install App
+                </a>
                 <p class="get-started-note">No download required. Works on desktop and mobile.</p>
             </div>
         </div>
@@ -325,7 +550,7 @@
                         <h4>Product</h4>
                         <a href="#features">Features</a>
                         <a href="#philosophy">Philosophy</a>
-                        <a href="https://app.stonecircle.space">Open App</a>
+                        <a href="https://app.stonecircle.space">Install App</a>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
@@ -338,6 +563,7 @@
             <div class="footer-bottom">
                 <p>Grounded in respect. Built for distributed teams.</p>
                 <p>&copy; 2025 Stone Circle. Your team. Your time. Your space.</p>
+                <p class="footer-disclaimer">* App demos shown for illustrative purposes</p>
             </div>
         </div>
     </footer>

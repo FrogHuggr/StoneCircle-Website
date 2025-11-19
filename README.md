@@ -35,7 +35,7 @@ Visit `http://localhost:8000`
 
 ## Design
 
-- Calm, professional aesthetic
+- Professional aesthetic
 - Stone gray color palette matching the app
 - Grounded, earthy theme
 - Privacy-first messaging
