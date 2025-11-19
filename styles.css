@@ -1140,6 +1140,24 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: var(--spacing-xl);
+    transition: all 200ms ease;
+}
+
+.install-card:hover {
+    border-color: var(--earth-brown);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+}
+
+.install-card-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-muted);
+    transition: color 200ms ease;
+}
+
+.install-card:hover .install-card-icon {
+    color: var(--earth-brown);
 }
 
 .install-card-title {
