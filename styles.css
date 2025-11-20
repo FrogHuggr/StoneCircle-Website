@@ -1763,4 +1763,8 @@ body {
         padding: var(--spacing-md) var(--spacing-2xl);
         font-size: 1.05rem;
     }
+
+    .number-value {
+        font-size: 2rem;
+    }
 }
